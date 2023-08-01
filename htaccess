@@ -6,7 +6,7 @@ RewriteCond %{REQUEST_URI} !#
 
 RewriteCond %{REQUEST_URI} !(.*)/$
 
-RewriteRule ^(.*)$ http://hiepkhachgiangho.vn/$1/ [L,R=301]
+RewriteRule ^(.*)$ http://hiepkhach.net.vn/$1/ [L,R=301]
 
 <files .htaccess="">
 
@@ -28,7 +28,7 @@ deny from all
 
 LimitRequestBody 102400
 
-RewriteRule ^category/(.+)$ http://hiepkhachgiangho.vn/$1 [R=301,L]
+RewriteRule ^category/(.+)$ http://hiepkhach.net.vn/$1 [R=301,L]
 
 RewriteEngine On
 RewriteCond %{HTTPS} off
@@ -38,7 +38,7 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_URI} !adp
 RewriteCond %{HTTP_COOKIE} !adp_token=[^;]+ [NC]
-RewriteRule .* https://hiepkhachgiangho.vn/adp.php?ref=https://hiepkhachgiangho.vn/$0 [R=301,L]
+RewriteRule .* https://hiepkhach.net.vn/adp.php?ref=https://hiepkhach.net.vn/$0 [R=301,L]
 
 # Chống Upload Shell PHP
 
