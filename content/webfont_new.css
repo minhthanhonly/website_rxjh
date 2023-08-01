@@ -1,7 +1,0 @@
-@font-face{
-	font-family:'NanumBarunGothic';
-	src:url(NanumBarunGothicWeb.html);
-	src:url(NanumBarunGothicWebd41d.html?#iefix) format('embedded-opentype'),
-    	url(NanumBarunGothicWeb-2.html) format('woff'),
-        url(NanumBarunGothicWeb-3.html) format('truetype');
-}

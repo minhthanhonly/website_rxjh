@@ -77,9 +77,6 @@
 			else if($func == 'reward'){
 				include "reward.php";
 			}
-			else if($func == 'test'){
-				include "test.php";
-			}
 			else{
 				if(isset($_SESSION["auth"]['name'])){
 					include "playerinfo.php";	
@@ -91,12 +88,6 @@
 		}
 	}
 	else{
-		if(isset($_SESSION["auth"]['name'])){
-			include "playerinfo.php";	
-		}
-		else{
-				
-		}
-}
-	
+		include "home.php";
+	}
 ?>

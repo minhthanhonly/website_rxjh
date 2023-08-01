@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>.:: Hiệp Khách Giang Hồ ::.</title>
+<title>.:: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân ::.</title>
 <link rel="shortcut icon" href="http://yulgang.mgame.com/favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="pREndLVVRadvwpFjs6eOgxzKXLUFwBzxlimyHVU-8m8" />
