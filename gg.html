@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script type=”text/JavaScript”>
+        function killCopy(e){ 
+            return false } 
+        function reEnable(){ 
+            return true } 
+        document.onselectstart = new Function (“return false”) 
+        
+        if (window.sidebar){  
+            document.onmousedown=killCopy 
+            document.onclick=reEnable 
+        }
+    </script>
+</head>
+<script language="JavaScript">
+    window.onload = function() {
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function(e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+                disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+                disabledEvent(e);
+            }
+        }, false);
+
+        function disabledEvent(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            } else if (window.event) {
+                window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+        }
+    };
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HIỆP KHÁCH GIANG HỒ</title>
+<style type="text/css">
+<!--
+/* -- 全局CSS定义 -- */
+body {background:#000;text-align:left;margin:0 auto;padding: 0;font-family: "verdana";font-size: 12px;color:#e3a35f;line-height: 1.2em}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0 auto;padding: 0;border: 0;}
+h1,h2,h3,h4,h5,h6,p { margin:0; padding:0;}
+table,td,tr,th{font-size:9px;}
+input {border:1px solid #8f8f8f;}
+
+/* -- 链接颜色 -- */
+a:link {color:#bfddf1; text-decoration:none;}
+a:visited {color:#bfddf1;text-decoration:none;}
+a:hover {color:#bfddf1; text-decoration:underline;}
+a:active {color:#bfddf1;}
+
+/* 颜色属性 [定义规则，小写c加颜色名称] */
+.cRed,a.cRed:link,a.cRed:visited,a.cRed:hover,a.cRed:active{ color:#f00;text-decoration:underline;}
+.cBlue,a.cBlue:link,a.cBlue:visited,a.cBlue:hover,a.cBlue:active{color:#0140fe;text-decoration:underline;}
+.cGreen,a.cGreen:link,a.cGreen:visited,a.cGreen:hover,a.cGreen:active{color:#0c0;text-decoration:underline;}
+.cWhite,a.cWhite:link,a.cWhite:visited{ color:#fff}
+
+/* 字体属性 [定义规则，小写f加属性名称] */
+.fB {font-weight: bold;}
+.fI {font-style: italic;}
+
+/* 字体大小*/
+.f9px{ font-size:9px;}
+.f11px{ font-size:11px;}
+
+/* 其他属性 */
+.left{ float: left;}
+/*.right{ float: right;}*/
+.clear{ clear: both; font-size:0px; width:0px; height:0; visibility: hidden; line-height: 0}
+.hidden {display: none;}
+.unLine ,.unLine a{text-decoration: none;}
+.noBorder{border:none;}
+.dis{display:block}
+.undis{display:none}
+
+
+/*content*/
+.content{float:left;width:337px;height:320px;padding-left:15px;background:#000}
+
+/*nav*/
+.nav h1{height:30px;margin-left:23px}
+.nav a{margin-right:16px;text-align:center;}
+.hs,.ls{padding:10px 0 0 0}
+.hs a:link {color:#ffa800; text-decoration:none;}
+.hs a:visited {color:#ffa800;text-decoration:none;}
+.hs a:hover {color:#ffa800; text-decoration:underline;}
+.ls a:link {color:#00c6ff; text-decoration:none;}
+.ls a:visited {color:#00c6ff;text-decoration:none;}
+.ls a:hover {color:#00c6ff; text-decoration:underline;}
+
+
+
+/*news*/
+.news,.news2{margin:6px 0 0 0;float: left}
+.news h2,.news2 h2{color:#ff0000;font-size:14px;line-height:16px;margin-bottom: 5px}
+.more{padding-left:211px;line-height:12px;font-size:10px;}
+.more a:link {color:#f95b7c; text-decoration:none;}
+.more a:visited {color:#f95b7c;text-decoration:none;}
+.more a:hover {color:#f95b7c;text-decoration:underline;}
+.news li {display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;position:relative;width:250px;margin-left: 13px;float:left;}
+.news li a {background:url(../../Documents/Images/icon02.gif) no-repeat 0 5px;display:block;zoom:1;*display:inline;height:20px;line-height:20px;overflow:hidden;float:left;padding-left:15px;margin-right:4px;color: #bfddf1}
+.news li span {position:absolute;top:2px;right:-147px;width:60px;font-size:10px;line-height:20px;color: #bfddf1}
+.news2 li{
+	display:block;
+	zoom:1;
+*display:inline;	height:60px;
+	line-height:20px;
+	overflow:hidden;
+	margin-left: 30px;
+	width:400px;
+	float:left;
+	padding: 0px;
+}
+.STYLE1 {font-size: 10px}
+.style2 {font-size: 12px}
+.style6 {color: #00FF00}
+
+-->
+</style>
+</head>
+ <BODY>
+  <div class="content">
+ <div class="nav">
+			<p class="hs">
+	  <div class="news">
+				  <li><a href="http://hiepkhachgiangho.vn" target="_blank"><font color="#FFFF00">⛔ 18:00PM 04/11 | BẢO TRÌ | Tổng hợp cậ...</font></a><span>13-04-22</span></li>
+				  <li><a href="http://hiepkhachgiangho.vn" target="_blank">Mừng ngày sinh nhật Hiệp Khách 2022...</a><span>13-04-22</span></li>
+				  <li><a href="http://www.kuxuejh.cn/jh003.aspx" target="_blank">Áo Khoác Vào Thu Xứ Hàn </a><span>13-07-21</span></li>
+				  <li><a href="http://www.kuxuejh.cn/Index.aspx" target="_blank">[Săn Lùng] Đao Kiếm Tiếu</a><span>13-07-21</span></li>
+				  <li><a href="http://www.kuxuejh.cn/Index.aspx" target="_blank">Thất Tịch cùng Ngưu Chức</a><span>13-07-21</span></li>
+				  <li><a href="http://www.kuxuejh.cn/Index.aspx" target="_blank">Đua Top Chiến Trường</a><span>13-07-21</span></li>
+							
+			  </ul>
+	  </div>
+					<div class="news2">
+						<h2 class="style2"> Vật Phẩm Mới [ <span class="style6">BÁCH BẢO CÁC</span> ]
+						  <iframe src="bbg/small/Index.html" frameborder="0" width="250" scrolling="No" height="18" allowtransparency="allowtransparency"></iframe>
+					  </h2>
+					<ul>
+								<li><img src="Images/PF/65765.gif" width="55" height="55" style="margin-right:10px"><img src="Images/PF/52500.gif" width="55" height="55" style="margin-right:10px"><img src="Images/PF/61591.gif" width="55" height="55" style="margin-right:10px"><img src="Images/PF/51511.gif" width="55" height="55" style="margin-right:10px"><img src="Images/PF/57691.gif" width="55" height="55" style="margin-right:10px"><img src="Images/PF/56421.gif" width="55" height="55 style="margin-right:10px" /></li>
+			    <br></br>
+					  </ul>
+	  </div>
+  </div>
+</HTML>

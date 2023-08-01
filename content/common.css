@@ -1,0 +1,100 @@
+@charset "euc-kr";
+/*
+------------------------------------------------------------
+MGAME Web Design Team
+first written: Yang Young bok 151221
+updated: YYB 160422
+------------------------------------------------------------
+*/
+/* reset */
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,p,th,td,fieldset,legend,input,button{margin:0;padding:0}
+body,input,button,select,textarea{font-family:NanumBarunGothic,arial;font-size:12px;line-height:18px;color:#4f5253}
+fieldset,img{border:0}
+img{vertical-align:top}
+ul,ol,li{list-style:none}
+a{color:#4f5253;text-decoration:none}
+a:hover{color:#4f5253;text-decoration:underline}
+input[type="radio"],input[type="checkbox"]{width:13px;height:13px;vertical-align:middle}
+table{border-collapse:collapse;width:100%}
+.hidden{top:0;left:0;margin:0;padding:0;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0;*position:absolute}
+/* layout */
+.wrap{min-width:1100px;background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap.jpg) no-repeat center 0;word-break:keep-all;word-wrap:break-word}
+.wrapNews{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_news.jpg)}
+.wrapGuide{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_guide.jpg)}
+.wrapCommunity{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_community.jpg)}
+.wrapRanking{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_ranking.jpg)}
+.wrapStore{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_Store.jpg)}
+.wrapDownload{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_download.jpg)}
+.wrapCustomer{background-image:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_wrap_customer.jpg)}
+.header{position:relative;margin:0 auto;padding:60px 0 0 0;width:1100px;height:124px}
+.header h1{position:absolute;top:63px;left:12px;z-index:100}
+/* footer */
+.footer{background:#e9ebec;overflow:hidden;_zoom:1}
+.footerArea{position:relative;margin:0 auto;padding:31px 0 18px 178px;width:922px;overflow:hidden;_zoom:1}
+.footer h2{position:absolute;top:66px;left:12px}
+.siteinfo{margin:0 0 16px 0}
+.siteinfo li{display:inline;padding:0 5px 0 8px;background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/line_siteinfo.gif) no-repeat 0 2px}
+.siteinfo li:first-child{padding-left:0;background:none}
+.gameinfo{float:left;margin:5px 0 0 10px}
+.gameinfo img{margin:0 0 0 9px;vertical-align:middle}
+address{float:left;font-style:normal;font-size:11px;color:#909495}
+address span{margin:0 6px;font-family:dotum;color:#cfd1d1}
+address a{color:#909495}
+.copyright{margin:7px 0 0 0}
+.copyright a{text-decoration:underline;color:#f86f01}
+/* gnb */
+.gnb{position:relative;padding:0 0 0 263px;z-index:100}
+.gnb a{display:block;text-decoration:none}
+.gnb li{float:left}
+.gnb > li{background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/line_gnb.png) no-repeat 0 12px}
+.gnb > li > a{padding:10px 25px 12px 25px;font-weight:bold;font-size:18px;line-height:20px;color:#fff;text-shadow:#666 1px 1px 1px}
+.gnb > li > a:hover,.gnb > li.on > a{background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bu_gnb.gif) no-repeat center 37px;color:#d1fe00}
+.gnb > li:first-child{background:none}
+.gnb ul{position:absolute;top:41px;height:0;background:#d1fe00;overflow:hidden}
+.gnb ul a{padding:7px 11px 6px 11px;background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/line_gnb.gif) no-repeat 0 10px;font-size:14px;color:#425a07}
+.gnb ul a:hover{color:#161f00}
+.gnb ul li:first-child a{background:none}
+.gnb .on ul{padding:0 5px;height:auto}
+.gnb .sub1{left:265px}
+.gnb .sub2{left:355px}
+.gnb .sub3{left:390px}
+.gnb .sub4{left:515px}
+.gnb .sub5{left:630px}
+.gnb .sub6{left:660px}
+.gnb .sub7{left:175px}
+.search{position:absolute;top:63px;right:0;width:244px;height:31px;border:none;background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_search.png) no-repeat;z-index:100}
+.search input[type=text]{padding:6px 10px;width:195px;height:19px;border:none;background:none;color:#95abae;line-height:20px}
+.search *{vertical-align:middle}
+/* login */
+.fLogin.main,.logout.main{padding:17px 12px 0 13px;width:219px;height:151px;background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/bg_login_main.png) no-repeat}
+.fLogin.sub,.logout.sub{padding:18px 12px 0 12px;width:218px;height:150px;border:1px solid #dbdee0}
+.fLogin .input{overflow:hidden;_zoom:1}
+.fLogin .text{float:left;margin:0 6px 3px 0;padding:5px 7px;width:200px;height:20px;border:1px solid #3b6115;font-size:15px}
+.main .text{color:#747474}
+.sub .text{color:#b6bbbe}
+.fLogin .id{background-position:0 0}
+.fLogin .pw{background-position:0 -25px}
+.fLogin .btn{margin:5px 0 0 0}
+.fLogin .uotp{margin:12px 2px 15px 2px;overflow:hidden;_zoom:1}
+.fLogin .uotp li{float:right}
+.fLogin .uotp li:first-child{float:left}
+.fLogin .member{margin:0 2px;padding:10px 0 0 0;font-size:11px;text-align:center}
+.fLogin .member a{color:#878c8e}
+.fLogin .member span{margin:0 8px;font-family:dotum;color:#eaeced}
+.fLogin.main .member{background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/line_login.png) repeat-x}
+.fLogin.main .member a{color:#b7c87b}
+.fLogin.main .member span{color:#445e1d}
+.fLogin.sub .member{border-top:1px solid #eaeced}
+.logout{font-size:11px}
+.logout .user{padding:4px 0 0 0;text-align:center}
+.logout .user strong{font-size:14px}
+.logout .user p{margin:5px 0 12px 0;color:#b6bbbe}
+.logout .btn{text-align:center; word-spacing:4px}
+.logout .mcash{margin:17px 2px 0 2px;padding:12px 0 0 0;text-align:right}
+.logout .mcash span{float:left;margin:2px 0 0 0}
+.logout .mcash em{font-style:normal;color:#ff4200}
+.logout.main .mcash{background:url(../../image.mgame.com/mgamezzang/games/yulgang_v3/common/line_login.png) repeat-x;color:#c7db7f}
+.logout.main .user{color:#f0febe}
+.logout.main p{color:#b7c87b}
+.logout.main .mcash em{color:#ffba00}
+.logout.sub .mcash{border-top:1px solid #eaeced}

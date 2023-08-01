@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+@import "dropdown.css";
+
+ul.dropdown-linear {
+ width: 100%;
+ margin:0 auto;
+ 
+}
+
+ul.dropdown-linear ul li {
+ float: left;
+ 
+}
+
+ul.dropdown-linear li.hover,
+ul.dropdown-linear li:hover {
+ position: static;
+}
+
+ul.dropdown-linear ul ul {
+ display: none !important;
+}
