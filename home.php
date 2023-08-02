@@ -33,11 +33,12 @@
 						$sql_command = "SELECT FLD_ID,FLD_NAME,FLD_ZX,FLD_JOB,FLD_LEVEL,FLD_EXP,FLD_JOB_LEVEL,FLD_WX,FLD_ZS from rxjhgame.dbo.TBL_XWWL_Char order by FLD_ZS desc, FLD_LEVEL desc, FLD_EXP desc";
 						
 						$item = odbc_exec($dbhandle, $sql_command);
-						$i=-1;
+						$i=0;
 						while($row = odbc_fetch_array($item))
 						{
 							$taikhoan = $row['FLD_ID'];
 							$i++;
+							
 							if($taikhoan == "hoanglong15" || $taikhoan == "littl3ird" || $taikhoan == "0" || $taikhoan == "krhuy1996" || $taikhoan == "krhuy96" || $taikhoan == "1" || $taikhoan == "2" || $taikhoan == "3" || $taikhoan == "a" || $taikhoan == "b" || $taikhoan == "c")
 							{
 								$i--;
@@ -48,6 +49,9 @@
 								<td>".$row['FLD_NAME']."</td>
 								<td>".$row['FLD_LEVEL']."</td>
 							</tr>";
+							if($i >= 10){
+								break;
+							}
 						}
 					?>
 				</tbody>
