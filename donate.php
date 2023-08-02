@@ -1,4 +1,4 @@
-<h1>Donate</h1>
+<h1 class="hdg-01">Donate Ủng Hộ Duy Trí Server</h1>
 <table class="tbl">
 	<tbody>
 		<tr>
