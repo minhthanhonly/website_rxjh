@@ -1,16 +1,26 @@
 
+<h1 class="hdg-01">
+	Bảng Xếp Hạng
+</h1>
+<style type="text/css">
+<!--
+.style1 {color: green}
+.style2 {color: #FF0000}
+.style3 {color: #FFFFFF}
+-->
+</style>
 <div align="center">
-<hr style="margin: 5px 0;"><b><font size="4">
-<a href="./?a=ranking">Xếp hạng cấp độ</a> | <a href="./?a=tlc">Xếp hạng thế lực chiến</a> | <a href="./?a=taiphu">Xếp hạng tài phú</a>
 <hr style="margin: 5px 0;">
-<font color="red">Bảng xếp hạng tài phú</font>
-<hr style="margin: 5px 0;"></font></b>
-	<table align='center' width='40%' border='0' cellspacing='0' cellpadding='0'>
-		<tr style="color:#CCCCFF;background-color:#000000;font-weight:bold;" height="30px">
-			<td width="10%"><FONT COLOR="White"><center><b>Thứ tự</td>
-			<td width="15%"><FONT COLOR="White"><center><b>Tài khoản</td>
-			<td width="15%"><FONT COLOR="White"><center><b>Điểm</td>
+<a href="./?a=ranking" class="style2">Xếp hạng cấp độ</a> | <a href="./?a=tlc" class="style2">Xếp hạng thế lực chiến</a> | <a href="./?a=taiphu" class="style1">Xếp hạng tài phú</a>
+<hr style="margin: 5px 0;">
+	<table class="tbl">
+		<thead>
+		<tr>
+			<th width="10%">Thứ tự</th>
+			<th width="15%">Tài khoản</th>
+			<th width="15%">Điểm</th>
 		</tr>
+		</thead>
 <?php
 	// require "/include/define.php";
 	// require "/include/conn.php";

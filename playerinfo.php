@@ -17,61 +17,70 @@
 	
 ?>
 
-							<div style="width:100%; height:30%; padding-top:0%;" align="center">
-								<hr style="margin: 15px 0;">
-								<span align="center"><h1><font color="blue">Thông tin tài khoản</font></h1></span>
-								<hr style="margin: 15px 0;">
-									<table width="80%" align="center" style="padding-top:3%;">
-										<tr align="right" height="60px">
-											<td width="30%" align="right">Tài khoản:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="<?php echo $_SESSION["auth"]['name'];?>" id="hw_an" pattern="[A-Za-z0-9]+" type="text" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Mật khẩu cấp 1:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="******" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Mật khẩu cấp 2:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="******" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Cash hiện có:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="<?php echo number_format($_SESSION["auth"]['FLD_RXPIONT'],0);?>@" id="hw_sk" pattern="[0-9]+" type="text" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Trạng thái:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="<?php echo $_SESSION["auth"]['FLD_ONLINE']>0?"ONLINE":"OFFLINE"; ?>" id="hw_sk" pattern="[0-9]+" type="text" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Nhân vật:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;
-												<?php if(odbc_num_rows($nv) > 0) {?>
-												  <select class="srk" name="idnv" id="idnv">
-												  <?php 
-												   while($row = odbc_fetch_array($nv)) {
-														echo '<option value="'.$row['FLD_NAME'].'">Nhân vật: '.$row['FLD_NAME'].' - Cấp độ: '.$row['FLD_LEVEL'].'</option>';
-													}
-													?>
-												  </select>
-												<?php }?>
-											</td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Họ và tên:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" value="<?php echo $_SESSION["auth"]['FLD_NAME'];?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" disabled></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Email:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" name="passx" value="<?php echo substr(strstr($_SESSION["auth"]['FLD_Mail'], '@', true),0,2)."******".strstr($_SESSION["auth"]['FLD_Mail'], '@');?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" disabled>
-											</td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Thời gian đăng nhập cuối:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" name="passx" value="<?php echo $_SESSION["auth"]['FLD_LASTLOGINTIME'];?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" disabled></td>
-										</tr>
-									</span>
-									</table>
-									
-								</div>
+<div>
+	<h1>Thông tin tài khoản</h1>
+		<table class="tbl">
+			<tr>
+				<td width="30%" class="right">Tài khoản:</td>
+				<td><input class="inpt" value="<?php echo $_SESSION["auth"]['name'];?>" id="hw_an" pattern="[A-Za-z0-9]+" type="text" size="35" readonly></td>
+			</tr>
+			<tr>
+				<td class="right">Mật khẩu cấp 1:</td>
+				<td><input class="inpt" value="******" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35" readonly><br>
+				<a href="/?a=changepass">
+					Đổi mật khẩu
+				</a> 
+			</td>
+			</tr>
+			<tr>
+				<td class="right">Mật khẩu cấp 2:</td>
+				<td><input class="inpt" value="******" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35" readonly></td>
+			</tr>
+			<tr>
+				<td class="right">Cash hiện có:</td>
+				<td><input class="inpt" value="<?php echo number_format($_SESSION["auth"]['FLD_RXPIONT'],0);?>@" id="hw_sk" pattern="[0-9]+" type="text" size="35" readonly></td>
+			</tr>
+			<tr>
+				<td class="right">Trạng thái:</td>
+				<td><input class="inpt" value="<?php echo $_SESSION["auth"]['FLD_ONLINE']>0?"ONLINE":"OFFLINE"; ?>" id="hw_sk" pattern="[0-9]+" type="text" size="35" readonly></td>
+			</tr>
+			<tr>
+				<td class="right">Nhân vật:</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;
+					<?php if(odbc_num_rows($nv) > 0) {?>
+						<select class="srk" name="idnv" id="idnv">
+						<?php 
+						while($row = odbc_fetch_array($nv)) {
+							echo '<option value="'.$row['FLD_NAME'].'">Nhân vật: '.$row['FLD_NAME'].' - Cấp độ: '.$row['FLD_LEVEL'].'</option>';
+						}
+						?>
+						</select>
+					<?php }?>
+				</td>
+			</tr>
+			<tr>
+				<td class="right">Họ và tên:</td>
+				<td><input class="inpt" value="<?php echo $_SESSION["auth"]['FLD_NAME'];?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" readonly></td>
+			</tr>
+			<tr>
+				<td class="right">Email:</td>
+				<td><input class="inpt" name="passx" value="<?php echo substr(strstr($_SESSION["auth"]['FLD_Mail'], '@', true),0,2)."******".strstr($_SESSION["auth"]['FLD_Mail'], '@');?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" readonly>
+				</td>
+			</tr>
+			<tr>
+				<td class="right">Thời gian đăng nhập cuối:</td>
+				<td><input class="inpt" name="passx" value="<?php echo $_SESSION["auth"]['FLD_LASTLOGINTIME'];?>" id="hw_sk" pattern="[A-Za-z0-9]+" type="text" size="35" readonly></td>
+			</tr>
+			<tr>
+				<th class="center" colspan="2">
+					<a href="/?a=logout">
+						<input type="submit" value="Đăng Xuất">
+					</a> 
+				</th>
+			</tr>
+		</span>
+		</table>
+		
+	</div>
 
 

@@ -3,6 +3,9 @@
 	// require "/include/define.php";
 	// require "/include/conn.php";
 	// require "/include/gump.class.php";
+	if (isset($_SESSION["auth"]['name'])) {
+		echo "<script>window.location.href = \"./?a=playerinfo\";</script>";
+	}
 	$error1="";
 	if(isset($_POST['accx'])){
 		$valide = new GUMP();
@@ -51,31 +54,30 @@
 		}
 	}
 ?>
-						<form method="POST" autocomplete="off">
-							<div style="width:100%; height:100%; padding-top:0%;" align="center">
-								<hr style="margin: 15px 0;">
-								<span align="center"><h1><font color="blue"></font></h1></span>
-								<hr style="margin: 15px 0;">
-									<center><h3><font color="red"><?php echo $error1;?></font></h3></center>
-									<table width="80%" align="center" style="padding-top:3%;">
-										<tr align="right" height="60px">
-											<td width="30%" align="right">Tài khoản:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" name="accx" placeholder="Tài khoản | A-Za-z0-9 | hkdvacc" id="hw_an" pattern="[A-Za-z0-9]+" type="text" size="35"></td>
-										</tr>
-										<tr height="60px">
-											<td align="right">Mật khẩu:</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" class="inpt" name="passx" placeholder="Mật khẩu | A-Za-z0-9 | ******" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35"></td>
-										</tr>
-										<tr height="60px">
-											<td>&nbsp;</td>
-											<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="padding: 10px 10px;" type="submit" value="Đăng nhập" id="submit" name="submit"></td>
-										</tr>
-										<tr height="60px">
-											<td align="right"><a href="./?a=lostpass" style="color: #FFFFFF!important; text-decoration:none;"> Quên mật khẩu</a></td>
-											<td align="center"><a href="./?a=reg" style="color: #FFFFFF!important; text-decoration:none;">Đăng ký </a></td>
-										</tr>
-									</span>
-									</table>
-									
-								</div>
-						</form>
+<h1 class="hdg-01">
+	Đăng Nhập
+</h1>
+<form method="POST" autocomplete="off">
+	<div>
+		<p class="error center red"><?php echo $error1;?></p>
+		<table class="center tbl mt20">
+			<tr>
+				<th width="30%" class="right">Tài khoản:</th>
+				<td><input class="inpt" name="accx" placeholder="Tài khoản" id="hw_an" pattern="[A-Za-z0-9]+" type="text" size="35"></td>
+			</tr>
+			<tr>
+				<th class="right">Mật khẩu:</th>
+				<td><input class="inpt" name="passx" placeholder="Mật khẩu" id="hw_sk" pattern="[A-Za-z0-9]+" type="password" size="35"></td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td><input type="submit" value="Đăng nhập" id="submit" name="submit"></td>
+			</tr>
+			<tr>
+				<td class="right"></td>
+				<td><a href="./?a=lostpass"> Quên mật khẩu</a><br>
+				<a href="./?a=reg">Đăng ký </a></td>
+			</tr>
+		</table>
+	</div>
+</form>

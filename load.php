@@ -4,6 +4,7 @@
 	// require "./include/gump.class.php";
 	// require "./include/gameconn.php";
 	if(isset($_GET['a'])){
+		echo '<div class="wrp-container"><div class="wrp-sub-page">';
 		$validate = new GUMP();
 		$_GET = $validate->sanitize($_GET);
 		$validate->validation_rules(array(
@@ -86,6 +87,7 @@
 				}
 			}
 		}
+		echo '</div></div>';
 	}
 	else{
 		include "home.php";

@@ -1,151 +1,155 @@
-<table width="640" height="41" border="0" align="center" cellpadding="5" cellspacing="3" bordercolor="#000099"
-  bgcolor="#000099">
-  <tbody>
-    <tr>
-      <td bgcolor="#fbfbfb" height="15" valign="center" align="middle">
-        <div align="center">
-          <h1 class="style43 style1"><strong>Chọn phương thức thanh toán</strong></h1>
-        </div>
-      </td>
-    </tr>
-  </tbody>
+<h1>Donate</h1>
+<table class="tbl">
+	<tbody>
+		<tr>
+			<th>
+				Ví điện tử: Momo
+			</th>
+		</tr>
+	</tbody>
 </table>
-<table width="639" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#000000" bgcolor="#000000">
-  <tbody>
-    <tr>
-      <td width="627" height="104" align="center" bgcolor="#999999">
-        <div align="center">
-          <p><span class="style2 style52 style6"><strong>Ví điện tử: Momo </strong></span><br />
-    </tr>
-    <tr>
-      <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>Chủ tài
-            khoản:</strong> Nguyễn Thăng Long </span></td>
-    </tr>
-    <tr>
-      <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>Số Tài Khoản:
-          </strong>0937050731</span></td>
-    </tr>
-    <tr>
-      <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>Nội
-            dung:</strong> Tài khoản đăng nhập game của bạn</span></td>
-    </tr>
-    <tr>
-      <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>Lưu ý: Bank thành
-            công liên hệ Fanpage!!</strong></span></td>
-    </tr>
-  </tbody>
+<br>
+<table>
+	<tbody>
+		<tr>
+			<td><span class="style2">Chủ tài khoản: Nguyễn Thăng Long </span></td>
+		</tr>
+		<tr>
+			<td><span class="style2">Số Tài Khoản:
+					0937050731</span></td>
+		</tr>
+		<tr>
+			<td><span class="style2">Nội dung: Tài khoản đăng nhập game của bạn</span></td>
+		</tr>
+		<tr>
+			<td><span class="style2">Lưu ý: Bank thành công liên hệ Fanpage!!</span></td>
+		</tr>
+	</tbody>
 </table>
-
-<div align="center">
-  <table width="640" height="41" border="0" align="center" cellpadding="5" cellspacing="3" bordercolor="#000099"
-    bgcolor="#000099">
-    <tbody>
-      <tr>
-        <td bgcolor="#fbfbfb" height="18" valign="center" align="middle">
-          <div align="center">
-            <h1 class="style43 style2 style3">Bảng Giá - ATM</h1>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <table width="640" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#000000" bgcolor="#000000">
-    <tbody>
-      <tr>
-        <td width="280" align="center" bgcolor="#999999">
-          <div align="center">
-            <span class="style2 style57"><strong>Mệnh giá VNĐ</strong></span>
-        </td>
-        <td width="280" align="center" valign="center" bgcolor="#999999">
-          <div align="center">
-            <span class="style2 style57"><strong>@Cash</strong></span>
-        </td>
-        <td width="280" align="center" valign="center" bgcolor="#999999"><span
-            class="style2 style57"><strong>Bonus</strong></span></td>
-        <td width="280" align="center" valign="center" bgcolor="#999999"><span class="style57 style2"><strong>KM
-              0%</strong></span></td>
-        <td width="280" align="center" valign="center" bgcolor="#999999"><span class="style2 style57"><strong>Tổng
-              nhận</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>50.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>500@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>0%</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>500 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>100.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>1.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>0%</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>1,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>200.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>2.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>0%</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>2,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>300.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>3.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>0%</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>3,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style4">500.000 VNĐ</span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>5.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>5% (+250@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>5,250 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>1.000.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>10.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>10% (+1,000@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>11,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>2.000.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>20.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>15%(+3,000@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>23,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>3.000.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>30.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>20%(+6,000@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>36,000 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>5.000.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>50.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>25%(+12,500@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>62,500 @</strong></span></td>
-      </tr>
-      <tr>
-        <td height="100%" align="center" valign="center" bgcolor="#ffffff"><span class="style2"><strong>10.000.000
-              VNĐ</strong></span></td>
-        <td height="100%" align="center" bgcolor="#ffffff"><span class="style2"><strong>100.000@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>35% (+35000@)</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2"><strong>+0@</strong></span></td>
-        <td align="center" bgcolor="#ffffff"><span class="style2 style56"><strong>135,000 @</strong></span></td>
-      </tr>
-    </tbody>
-  </table>
+<br><br>
+<div>
+	<!-- <table class="center tbl">
+		<tbody>
+			<tr>
+				<th>ATM - Internet Banking</th>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table>
+	<tbody>
+			<tr>
+				<td><span class="style2">Chủ tài khoản: Nguyễn Thăng Long </span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">Số Tài Khoản: xxxxxxxxxxxxxxxxxx</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">Ngân Hàng: xxxxxxxxxxxxxxxxxx</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">Nội dung: Tài khoản đăng nhập game của bạn</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">Lưu ý: Bank thành công liên hệ Fanpage!!</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<br> -->
+	<table class="tbl">
+		<tbody>
+			<thead>
+				<tr>
+					<th>
+						Mệnh giá VNĐ
+						</td>
+					<th valign="center">
+						@Cash
+					</th>
+					<th valign="center">Bonus</th>
+					<th valign="center">KM 0%</th>
+					<th valign="center">Tổng nhận</th>
+				</tr>
+			</thead>
+			<tr>
+				<td><span class="style2">50.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">500@</span></td>
+				<td align="center"><span class="style2">0%</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">500 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">100.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">1.000@</span></td>
+				<td align="center"><span class="style2">0%</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">1,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">200.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">2.000@</span></td>
+				<td align="center"><span class="style2">0%</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">2,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">300.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">3.000@</span></td>
+				<td align="center"><span class="style2">0%</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">3,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style4">500.000 VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">5.000@</span></td>
+				<td align="center"><span class="style2">5% (+250@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">5,250 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">1.000.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">10.000@</span></td>
+				<td align="center"><span class="style2">10% (+1,000@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">11,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">2.000.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">20.000@</span></td>
+				<td align="center"><span class="style2">15%(+3,000@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">23,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">3.000.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">30.000@</span></td>
+				<td align="center"><span class="style2">20%(+6,000@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">36,000 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">5.000.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">50.000@</span></td>
+				<td align="center"><span class="style2">25%(+12,500@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">62,500 @</span></td>
+			</tr>
+			<tr>
+				<td><span class="style2">10.000.000
+							VNĐ</span></td>
+				<td height="100%" align="center"><span class="style2">100.000@</span></td>
+				<td align="center"><span class="style2">35% (+35000@)</span></td>
+				<td align="center"><span class="style2">+0@</span></td>
+				<td align="center"><span class="style2 style56">135,000 @</span></td>
+			</tr>
+		</tbody>
+	</table>
 </div>

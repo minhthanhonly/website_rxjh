@@ -1,28 +1,40 @@
 
+<h1 class="hdg-01">
+	Báº£ng Xáº¿p Háº¡ng
+</h1>
+<style type="text/css">
+<!--
+.style1 {color: green}
+.style2 {color: #FF0000}
+.style3 {color: #FFFFFF}
+-->
+</style>
 <div align="center">
-<hr style="margin: 5px 0;"><b><font size="4">
-<a href="./?a=ranking">X&#7871;p h&#7841;ng c&#7845;p &#273;&#7897;</a> | <a href="./?a=tlc">X&#7871;p h&#7841;ng th&#7871; l&#7921;c chi&#7871;n</a> | <a href="./?a=taiphu">X&#7871;p h&#7841;ng t&#224;i ph&#250;</a>
-<hr style="margin: 5px 0;"></font></b>
-	<table align='center' width='95%' border='0' cellspacing='0' cellpadding='0'>
-		<tr style="color:#CCCCFF;background-color:#000000;font-weight:bold;" height="30px">
-			<td width="5%"><FONT COLOR="White"><center><b>T.t&#7921;</td>
-			<td width="20%"><FONT COLOR="White"><center><b>T&#234;n nh&#226;n v&#7853;t</td>
-			<td width="15%"><FONT COLOR="White"><center><b>Lo&#7841;i</td>
-			<td width="5%"><FONT COLOR="White"><center><b>C&#7845;p</td>
-			<td width="20%"><FONT COLOR="White"><center><b>M&#244;n ph&#225;i</td>
-			<td width="15%"><FONT COLOR="White"><center><b>Th&#7871; l&#7921;c</td>
-			<td width="5%"><FONT COLOR="White"><center><b>Gi&#7871;t</td>
-			<td width="5%"><FONT COLOR="White"><center><b>Ch&#7871;t</td>
-			<td width="5%"><FONT COLOR="White"><center><b>&#272;i&#7875;m</td>
+<hr style="margin: 5px 0;">
+<a href="./?a=ranking" class="style2">X&#7871;p h&#7841;ng c&#7845;p &#273;&#7897;</a> | <a href="./?a=tlc"  class="style1">X&#7871;p h&#7841;ng th&#7871; l&#7921;c chi&#7871;n</a> | <a href="./?a=taiphu"  class="style2">X&#7871;p h&#7841;ng t&#224;i ph&#250;</a>
+<hr style="margin: 5px 0;">
+	<table class="tbl">
+		<thead>
+		<tr>
+			<th width="5%">T.t&#7921;</th>
+			<th width="20%">T&#234;n nh&#226;n v&#7853;t</th>
+			<th width="15%">Lo&#7841;i</th>
+			<th width="5%">C&#7845;p</th>
+			<th width="20%">M&#244;n ph&#225;i</th>
+			<th width="15%">Th&#7871; l&#7921;c</th>
+			<th width="5%">Gi&#7871;t</th>
+			<th width="5%">Ch&#7871;t</th>
+			<th width="5%">&#272;i&#7875;m</th>
 		</tr>
+		</thead>
 <?php
 	// require "/include/define.php";
 	// require "/include/conn.php";
 	// require "/include/gump.class.php";
 	
 	require "./include/conn.php";
-	//$sql_command = "SELECT ÈËÎïÃû,°ïÅÉ,ÊÆÁ¦,µÈ¼¶,É±ÈËÊý,ËÀÍöÊý from rxjhgame.dbo.EventTop order by É±ÈËÊý desc, (É±ÈËÊý-ËÀÍöÊý) desc, µÈ¼¶ desc";
-	$sql_command = "SELECT ÈËÎïÃû,°ïÅÉ,ÊÆÁ¦,µÈ¼¶,É±ÈËÊý,ËÀÍöÊý from rxjhgame.dbo.EventTop order by (É±ÈËÊý-ËÀÍöÊý) desc, µÈ¼¶ desc";
+	//$sql_command = "SELECT ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½È¼ï¿½,É±ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ from rxjhgame.dbo.EventTop order by É±ï¿½ï¿½ï¿½ï¿½ desc, (É±ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) desc, ï¿½È¼ï¿½ desc";
+	$sql_command = "SELECT ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½È¼ï¿½,É±ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ from rxjhgame.dbo.EventTop order by (É±ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) desc, ï¿½È¼ï¿½ desc";
 	
 	$item = odbc_exec($dbhandle, $sql_command);
 	$numberofitem = odbc_num_rows($item);
@@ -41,8 +53,8 @@ if($_POST)
 		));
 		$validated_data = $validate->run($_POST);
 		if($validated_data === false) {
-			echo "<font color=red size=69><b>?</b></font>";
-			die;
+			// echo "<font color=red size=69><b>?</b></font>";
+			// die;
 			//$error = (object)$validate->get_errors_array();
 		} 
 		else {
@@ -69,8 +81,8 @@ else
 		));
 		$validated_data = $validate->run($_GET);
 		if($validated_data === false) {
-			echo "<font color=red size=69><b>?</b></font>";
-			die;
+			// echo "<font color=red size=69><b>?</b></font>";
+			// die;
 			//$error = (object)$validate->get_errors_array();
 		} 
 		else {
@@ -82,8 +94,8 @@ else
 }
 	if($line*($page) >= $numberofitem || $page<0)
 	{
-		echo "<font color=red size=69><b>?</b></font>";
-		die;
+		// echo "<font color=red size=69><b>?</b></font>";
+		// die;
 	}
 
 
@@ -97,24 +109,24 @@ while($row = odbc_fetch_array($item))
 		$rank = $i+1;
 
 
-	$guild = $row['°ïÅÉ'];
+	$guild = $row['ï¿½ï¿½ï¿½ï¿½'];
 	$gx = substr($guild, -1);
 	if(!(($gx >= 'a' && $gx <= 'z')||($gx >= 'A' && $gx <= 'Z')||($gx >= '0' && $gx <= '9')))
 	{
 		$guild = substr($guild, 0, -2);
 	}
 	$theluc = "Kh&#244;ng c&#243;";
-	if($row['ÊÆÁ¦'] == 'Õý')
+	if($row['ï¿½ï¿½ï¿½ï¿½'] == 'ï¿½ï¿½')
 	{
 		$theluc = "<font color=\"blue\">Ch&#237;nh ph&#225;i</font>";
 	}
-	else if($row['ÊÆÁ¦'] == 'Ð°')
+	else if($row['ï¿½ï¿½ï¿½ï¿½'] == 'Ð°')
 	{
 		$theluc = "<font color=\"red\">T&#224; ph&#225;i</font>";
 	}
 	$loai = "Kh&#244;ng x&#225;c &#273;&#7883;nh";
 	
-	$sqll = "SELECT FLD_JOB FROM rxjhgame.dbo.TBL_Xwwl_Char WHERE FLD_NAME = '".$row['ÈËÎïÃû']."'";
+	$sqll = "SELECT FLD_JOB FROM rxjhgame.dbo.TBL_Xwwl_Char WHERE FLD_NAME = '".$row['ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½']."'";
 	$queryy = odbc_exec($dbhandle,$sqll);
 	$resultt = odbc_fetch_array($queryy);
 	if($resultt['FLD_JOB'] == 1){
@@ -150,14 +162,14 @@ while($row = odbc_fetch_array($item))
 				
 	echo "<tr style=\"background-color:#".($i%2==0?"FBF8EF":"E0E6F8").";\" height=\"25px\">
 	<td><center><FONT COLOR='Black'><b>".$rank."</td>
-	<td><center><FONT COLOR='Black'>&nbsp;".$row['ÈËÎïÃû']."&nbsp;</td>
+	<td><center><FONT COLOR='Black'>&nbsp;".$row['ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½']."&nbsp;</td>
 	<td><center><FONT COLOR='Black'>&nbsp;".$loai."&nbsp;</td>
-	<td><center><FONT COLOR='Black'>&nbsp;".$row['µÈ¼¶']."&nbsp;</td>
+	<td><center><FONT COLOR='Black'>&nbsp;".$row['ï¿½È¼ï¿½']."&nbsp;</td>
 	<td><center><FONT COLOR='Black'>&nbsp;".$guild."&nbsp;</td>
 	<td><center><FONT COLOR='Black'>&nbsp;".$theluc."&nbsp;</td>
-	<td><center><FONT COLOR='Black'>&nbsp;".$row['É±ÈËÊý']."&nbsp;</td>
-	<td><center><FONT COLOR='Black'>&nbsp;".$row['ËÀÍöÊý']."&nbsp;</td>
-	<td><center><FONT COLOR='Black'>&nbsp;".($row['É±ÈËÊý']-$row['ËÀÍöÊý'])."&nbsp;</td>
+	<td><center><FONT COLOR='Black'>&nbsp;".$row['É±ï¿½ï¿½ï¿½ï¿½']."&nbsp;</td>
+	<td><center><FONT COLOR='Black'>&nbsp;".$row['ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½']."&nbsp;</td>
+	<td><center><FONT COLOR='Black'>&nbsp;".($row['É±ï¿½ï¿½ï¿½ï¿½']-$row['ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'])."&nbsp;</td>
 	</tr>";
 	}
 }
@@ -166,29 +178,29 @@ while($row = odbc_fetch_array($item))
 	
 ?>
 	</table>
-	<hr style="margin: 10px 0;">
+	<hr class="mt20">
 	<form action="" method="post" id="form1">
-	  <center>
-	  <?php
-	  $truoc=$page-1;
-	  $sau=$page+1;
-	  $sotrang=round(($numberofitem/$line)-0.5);
-	  echo"<i>Trang $page c&#7911;a $sotrang</i> | ";
-	for ( $i = $page-2; $i <= $page+2; $i++ )
-	{
-		if($i>=0 && $i<=$sotrang)
-		{
-			if($i==$page)
-				echo"<strong><font color='red'>$i</font></strong> ";
-			else
-				echo "<a href='?a=tlc&page=$i'><font color='black'>$i</font></a> ";
-		}
-	}
-	 ?>
-	  | 
-			<input type="number" name="trang" min="0" max="<?php echo $sotrang;?>" value="<?php echo $page;?>"/>
-			<button type="submit">&#272;&#7871;n</button>
-	  </center>
+		<div class="flex pagination">
+			<?php
+			$truoc = $page - 1;
+			$sau = $page + 1;
+			$sotrang = round(($numberofitem / $line) - 0.51);
+			echo "<p>Trang $page / $sotrang</p>";
+			echo "<div class='flex gap10'>";
+
+			for ($i = 1; $i <= $sotrang; $i++) {
+				if ($i >= 0 && $i <= $sotrang) {
+					if ($i == $page)
+						echo "<strong class='current'>" . $i . "</strong>";
+					else
+						echo "<a href='?a=webshop&page=" . $i . "&type=" . $type . "'>" . $i . "</a> ";
+				}
+			}
+			?>
+			<input type="number" name="trang" min="0" max="<?php echo $sotrang; ?>" value="<?php echo $page; ?>" class='ml10'">
+			<input type="submit" value="Go"></input>
+			</div>
+		</div>
 	</form>
 	
 </div>

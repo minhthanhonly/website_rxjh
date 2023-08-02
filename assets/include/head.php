@@ -10,18 +10,18 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
-gtag('config', 'UA-127045668-1');
+gtag('config', 'XXX');
 function killCopy(e) {
     return false
 }
 function reEnable() {
     return true
 }
-document.onselectstart = new Function(“return false”)
+document.onselectstart = new Function("return false")
 
 if (window.sidebar) {
     document.onmousedown = killCopy
-    document.onclick = reEnable
+    document.onclick = reEnable }
 </script>
 
 <meta name="keywords"
