@@ -49,7 +49,7 @@
 		
 		<p class="center">
 			<a href="https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe" target="_blank" class="red">Nếu bạn dùng WinXP và không thể mở Login, vui lòng cài thêm Microsoft .NET Framework 3.5</a>
-		</td>
+		</p>
 	
 		
 	</div>
