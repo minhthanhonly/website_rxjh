@@ -1001,24 +1001,10 @@ a:hover {
 	width: 1px;
 	opacity: 0.2;
 	transform: translateY(-50%);
-	background-image: -moz-linear-gradient(90deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
-	background-image: -webkit-linear-gradient(90deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
-	background-image: -ms-linear-gradient(90deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
+	background-image: linear-gradient(180deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
 }
 
-/* .lst-link li + li::before{
-	content: "";
-	position: absolute;
-	width: 100%;
-	left: 50%;
-	top: 0;
-	height: 1px;
-	opacity: 0.5;
-	background-image: -moz-linear-gradient( 180deg, rgba(236,237,234,0) 0%, rgb(220,220,220) 49%, rgb(220,220,220) 50%, rgba(220,219,216,0) 100%);
-	background-image: -webkit-linear-gradient( 180deg, rgba(236,237,234,0) 0%, rgb(220,220,220) 49%, rgb(220,220,220) 50%, rgba(220,219,216,0) 100%);
-	background-image: -ms-linear-gradient( 180deg, rgba(236,237,234,0) 0%, rgb(220,220,220) 49%, rgb(220,220,220) 50%, rgba(220,219,216,0) 100%);
-	transform: translateX(-50%);
-} */
+
 .lst-link li a img {
 	margin-right: 1rem;
 	width: 2rem;
@@ -1083,9 +1069,7 @@ a:hover {
 	top: 0;
 	height: 1px;
 	opacity: 0.5;
-	background-image: -moz-linear-gradient(180deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
-	background-image: -webkit-linear-gradient(180deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
-	background-image: -ms-linear-gradient(180deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
+	background-image: linear-gradient(90deg, rgba(236, 237, 234, 0) 0%, rgb(220, 220, 220) 49%, rgb(220, 220, 220) 50%, rgba(220, 219, 216, 0) 100%);
 	transform: translateX(-50%);
 }
 

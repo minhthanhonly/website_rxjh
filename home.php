@@ -32,7 +32,7 @@
 				</thead>
 				<tbody>
 					<?php
-						$sql_command = "SELECT FLD_ID,FLD_NAME,FLD_ZX,FLD_JOB,FLD_LEVEL,FLD_EXP,FLD_JOB_LEVEL,FLD_WX,FLD_ZS from rxjhgame.dbo.TBL_XWWL_Char order by FLD_ZS desc, FLD_LEVEL desc, FLD_EXP desc";
+						$sql_command = "SELECT TOP 50 FLD_ID,FLD_NAME,FLD_ZX,FLD_JOB,FLD_LEVEL,FLD_EXP,FLD_JOB_LEVEL,FLD_WX,FLD_ZS from rxjhgame.dbo.TBL_XWWL_Char order by FLD_ZS desc, FLD_LEVEL desc, FLD_EXP desc";
 						
 						$item = odbc_exec($dbhandle, $sql_command);
 						$i=0;
@@ -95,41 +95,27 @@
 		<div class="box-home-wrap__right">
 			<div class="box-shop">
 				<ul>
-					<li title="Búp bê mèo may mắn. EXP +20%, Rớt đồ +20%, Tiền +40%, HP +100 trong 2 giờ(10 lần sử dụng)">
-						<div class="img"><img src="/assets/images/shop/1008000232.gif" alt=""></div>
-						<p>
-							<span class="name">Mèo Tài Phú</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
-						</p>
-					</li>
-					<li title="Trong vòng 24 giờ nhận thêm 150% điểm Exp (Level có thể dùng: 1~130, có thể dùng 1 lần)">
-						<div class="img"><img src="/assets/images/shop/1008000363.gif" alt=""></div>
-						<p>
-							<span class="name">Hộ tâm đơn (150%) (24 giờ)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 3000</span>
-						</p>
-					</li>
-					<li title="Đạo cụ đặc biệt, tăng lực công kích 15%, sức phòng ngự 15%, sinh lực 1000, điểm kinh nghiệm 40%, lực công kích võ công 10%, sức phòng ngự võ công 10%">
-						<div class="img"><img src="/assets/images/shop/1008000194.gif" alt=""></div>
-						<p>
-							<span class="name">Chí Tôn Hỏa Dương Đơn</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 880</span>
-						</p>
-					</li>
-					<li title="+300 Hp tất cả khí công + 1">
-						<div class="img"><img src="/assets/images/shop/1008000187.gif" alt=""></div>
-						<p>
-							<span class="name">Thái Cuồng Đơn (10 ngày)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 1380</span>
-						</p>
-					</li>
-					<li title="Trong 10 ngày + 300 HP 0,5% Def cho nhân vật.">
-						<div class="img"><img src="/assets/images/shop/1008000183.gif" alt=""></div>
-						<p>
-							<span class="name">Cầu Tuyết đơn(10 ngày)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 1500</span>
-						</p>
-					</li>
+
+					<?php
+						$sql_command = "SELECT TOP 5 id,FLD_PID,CONVERT(varbinary(MAX), FLD_NAME) as NAME,FLD_PRICE,CONVERT(varbinary(MAX), FLD_DESC) as DESCRIPT,FLD_DAYS from bbg.dbo.ITEMSELL
+						Order by NEWID()";
+
+						$item = odbc_exec($dbhandle, $sql_command);
+						while($row = odbc_fetch_array($item))
+						{
+							$tenitem = iconv('UTF-16LE', 'UTF-8', $row['NAME']);
+							$desitem = iconv('UTF-16LE', 'UTF-8', $row['DESCRIPT']);
+							$price = number_format($row['FLD_PRICE'], 0);
+
+							echo '<li title="'.$desitem.'">
+								<div class="img"><img src="../cpanel/WEBSHOP/ITEM/'.$row['FLD_PID'].'.gif" alt=""></div>
+								<p>
+									<span class="name">'.$tenitem.'</span>
+									<span class="price"><img src="/assets/images/shop/coin.png" alt=""> '.$price.'</span>
+								</p>
+							</li>';
+						}
+					?>
 					<li class="more">
 						<a href="/?a=webshop">+ Xem thêm</a>
 					</li>
