@@ -1,6 +1,7 @@
 <script src="/assets/js/top.js" defer></script>
 <div class="box-home-main">
 	<img src="/assets/images/img-main.png" alt="">
+	<div class="falling-leaves"></div>
 </div>
 <div class="wrp-container">
 	<div class="box-home-wrap">
