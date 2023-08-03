@@ -23,13 +23,13 @@ if (window.sidebar) {
 </script>
 
 <meta name="keywords"
-content="hiepkhach.net.vn,hk-dv.net,hkkteam,hiepkhach,hiep khach,hiepkhachgiangho,hiep khach giang ho,hiep khach dv,hiep khach kteam,hk k team,hk kteam,hkgh,yulgang online,yulgang">
+content="hiepkhach.net.vn,hiepkhach,hiep khach,hiepkhachgiangho,hiep khach giang ho,hkgh,yulgang online,yulgang">
 <!-- START: Facebook Meta -->
 <meta property="fb:app_id" content="">
-<meta property="og:title" content=".: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân :.">
+<meta property="og:title" content=".: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân - VNC Games Entertainment :.">
 <meta property="og:type" content="game">
 <meta property="og:url" content="http://hiepkhach.net.vn">
-<meta property="og:image" content="http://hiepkhach.net.vn//imgfb.png">
+<meta property="og:image" content="http://hiepkhach.net.vn/assets/images/imgfb.png">
 <meta property="og:site_name" content="hiepkhachgiangho.vn">
 <meta name="description" content="Hiệp Khách Giang Hồ, Hiệp Khách Kteam Hiệp Khách v17, Hiệp Khách Thăng Thiên 5, hkkteam" />
 <meta property="og:description" content="Hiệp Khách Giang Hồ, Hiệp Khách Kteam, Hiệp Khách v20 Hiệp Khách Thăng Thiên 5, hkkteam" />
