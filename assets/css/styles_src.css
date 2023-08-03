@@ -564,10 +564,25 @@ a:hover {
 .mt20 {
 	margin-top: 20px;
 }
+.mb20 {
+	margin-bottom: 20px;
+}
 
 .error {
 	color: #f00818;
 	font-size: 1.2rem;
+}
+.success {
+	color: green;
+	font-size: 1.2rem;
+}
+.note{
+    color: #ccc;
+    font-size: 1.2rem;
+}
+.note::before{
+    content: '*';
+    margin-right: 0.2rem;
 }
 
 /* -----------------------------------------------
@@ -1075,7 +1090,7 @@ a:hover {
 
 .box-chanel li {
 	position: relative;
-	padding: 1rem 0 1rem 5rem;
+	padding: 1rem 0 1rem 4rem;
 }
 
 .box-chanel li p {

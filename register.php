@@ -3,6 +3,7 @@
 // require "/include/conn.php";
 // require "/include/gump.class.php";
 $error1 = "";
+$ischeck= false;
 if (isset($_POST['username'])) {
 	$valide = new GUMP();
 	$valide->validation_rules(
@@ -12,10 +13,10 @@ if (isset($_POST['username'])) {
 			'verifyPassword' => 'required|alpha_dash|max_len,16|min_len,6',
 			'Password2' => 'required|alpha_dash|max_len,16|min_len,6',
 			'verifyPassword2' => 'required|alpha_dash|max_len,16|min_len,6',
-			'email' => 'required|valid_email',
-			'fullname' => 'required|alpha_space|max_len,50',
+			'email' => 'required|valid_email|max_len,50',
+			'fullname' => 'required|max_len,50',
 			'identityNumber' => 'required|numeric|max_len,15|min_len,6',
-			'sex' => 'required|numeric',
+			'sex' => 'required|numeric|max_len,1',
 			'cauhoi' => 'required|alpha_space|max_len,50',
 			'traloi' => 'required|alpha_space|max_len,50',
 		)
@@ -23,7 +24,7 @@ if (isset($_POST['username'])) {
 	$valide->filter_rules(
 		array(
 			'username' => 'trim|sanitize_string',
-			'password' => 'trim|sanitize_string',
+			'Password' => 'trim|sanitize_string',
 			'verifyPassword' => 'trim|sanitize_string',
 			'Password2' => 'trim|sanitize_string',
 			'verifyPassword2' => 'trim|sanitize_string',
@@ -51,16 +52,17 @@ if (isset($_POST['username'])) {
 		$ip = $_SERVER['REMOTE_ADDR'];
 
 
-		$partten = "/^([A-Z]){1}([\w_]+){5,11}$/";
+		$partten = "/([\w_]+){6,12}$/";
 		if (preg_match($partten, $pass, $matchs) && preg_match($partten, $pass2, $matchs)) {
 
 			$err = 0;
+			$error1 ='';
 			/*kiem ta tai khoan ton tai*/
 			$sql = "SELECT ID FROM TBL_ACCOUNT WHERE FLD_ID = '" . $acc . "'";
 			$query = odbc_exec($dbhandle, $sql);
 			if (odbc_num_rows($query) > 0) {
 				$err = 1;
-				echo "<script>alert('Tài khoản đã tồn tại. Vui lòng sử dụng tài khoản khác');</script>";
+				$error1 = "Tài khoản đã tồn tại. Vui lòng sử dụng tài khoản khác.";
 			}
 
 			/*kiem ta email ton tai*/
@@ -68,38 +70,38 @@ if (isset($_POST['username'])) {
 			$query = odbc_exec($dbhandle, $sql);
 			if (odbc_num_rows($query) > 0) {
 				$err = 1;
-				$error1 = "<br><center><b><font color=red size=4>Email này đã được sử dụng rồi</font></b></center>";
+				$error1 .= "<br>Email này đã được sử dụng";
 			}
 
 			if (md5($validated_data['Password']) != md5($validated_data['verifyPassword'])) {
 				$err = 1;
-				$error1 = "<br><center><b><font color=red size=4>Mật khẩu không trùng khớp</font></b></center>";
+				$error1 = "Mật khẩu không trùng khớp";
 			}
 
 			if (md5($validated_data['Password2']) != md5($validated_data['verifyPassword2'])) {
 				$err = 1;
-				$error1 = "<br><center><b><font color=red size=4>Mật khẩu cấp 2 không trùng khớp</font></b></center>";
+				$error1 = "Mật khẩu cấp 2 không trùng khớp";
 
 			}
 
 			if ($err == 0) {
 				$cauhoi = str_replace(" ", "", $cauhoi) . '?';
 				$sql = "INSERT INTO TBL_Account (FLD_ID,FLD_PASSWORD,FLD_PASSWORD2,FLD_CARD,FLD_NAME,FLD_QU,FLD_ANSWER,FLD_Mail,FLD_SEX,FLD_REGIP,FLD_RXPIONT,FLD_RXPIONTX)values('$acc','$pass','$pass2','$cmnd','$hoten','$cauhoi','$traloi','$mail','$sex','$ip',0,0)";
-				echo $sql;
 				$query = odbc_exec($dbhandle, $sql);
 
 				if ($query) {
-					$error1 = "<br><center><b><font color=green size=4>Chúc mừng, đăng ký tài khoản: <u>" . $acc . "</u> thành công !!!</font></b></center>";
+					$ischeck = TRUE;
+					$error1 = "<span class='green'>Chúc mừng, đăng ký tài khoản: <u>" . $acc . "</u> thành công!!!</span>";
 				} else {
-					$error1 = "<br><center><b><font color=red size=4>Lỗi đăng ký tài khoản, vui lòng thử lại hoặc liên hệ admin để được hỗ trợ!!!</font></b></center>";
+					$error1 = "Lỗi đăng ký tài khoản, vui lòng thử lại hoặc liên hệ admin để được hỗ trợ!!!</b></center>";
 				}
 
 			}
 
 		} else if (!preg_match($partten, $pass, $matchs)) {
-			$error1 = "Mật khẩu 1 chưa đúng định dạng.<br>Mật khẩu đúng địng dạng có mẫu: HkGiangHo2022<br>Vừa có kí tự chữ hoa nằm đầu tiên, vừa có kí tự chữ thường và vừa có chữ số";
+			$error1 = "Mật khẩu 1 chưa đúng định dạng. Mật khẩu không bao gồm các kí tự đặc biệt (6~16 kí tự)";
 		} else {
-			$error1 = "Mật khẩu 2 chưa đúng định dạng.<br>Mật khẩu đúng địng dạng có mẫu: HkGiangHo2022<br>Vừa có kí tự chữ hoa nằm đầu tiên, vừa có kí tự chữ thường và vừa có chữ số";
+			$error1 = "Mật khẩu 2 chưa đúng định dạng. Mật khẩu không bao gồm các kí tự đặc biệt (6~16 kí tự)";
 		}
 	}
 }
@@ -108,47 +110,50 @@ if (isset($_POST['username'])) {
 	<h1 class="hdg-01">
 		Đăng ký tài khoản mới
 	</h1>
-	<h3 class="error">
+	<h3 class="error mb20 center">
 		<?php echo $error1; ?>
 	</h3>
-
+	<?php if ($ischeck) { ?>
+	<?php } else { ?>
 	<form method="POST" autocomplete="off">
 		<table class="tbl">
 			<tbody>
-
-				<tr>
-					<th class="right">Lưu ý: </th>
-					<td><i>Mật khẩu phải có kí tự chữ hoa nằm đầu tiên.<br> Vừa có kí tự chữ thường.<br> hoặc có chữ số. Ví dụ: <b>HKGiangHo2022</b></i> </td>
-				</tr>
 				<tr>
 					<th width="30%" class="right">
 						<span>Tài khoản: </span>
 					</th>
 					<td>
-						<input class="srk" type="text" value="" id="username" name="username" size="36" maxlength="12"
+						<input class="srk" type="text" value="<?php if(isset($_POST['username'])) echo $_POST['username'];?>" id="username" name="username" size="36" maxlength="12"
 							placeholder="Tài khoản" pattern="[A-Za-z0-9]+">
 						<div class="error">
 							<?php echo isset($error->Username) ? $error->Username : '' ?>
 						</div>
+						<p class="note">6~12 kí tự</p>
 					</td>
 				</tr>
 				<tr>
 					<th class="right">
 						Mật khẩu: </th>
 					<td>
-						<input class="srk" type="password" value="" id="password" name="Password" size="36"
+						<input class="srk" type="password" value="<?php if(isset($_POST['Password'])) echo $_POST['Password'];?>" id="password" name="Password" size="36"
 							maxlength="16" placeholder="Mật khẩu" pattern="[A-Za-z0-9]+">
 						<div class="error">
 							<?php echo isset($error->Password) ? $error->Password : '' ?>
 						</div>
+						<p class="note">6~16 kí tự</p>
 					</td>
 				</tr>
 				<tr>
 					<th class="right">
 						Nhập lại: </th>
 					<td>
-						<input class="srk" type="password" value="" id="verifyPassword" name="verifyPassword" size="36"
+						<input class="srk" type="password" value="<?php if(isset($_POST['verifyPassword'])) echo $_POST['verifyPassword'];?>" id="verifyPassword" name="verifyPassword" size="36"
 							maxlength="16" placeholder="Nhập lại mật khẩu" pattern="[A-Za-z0-9]+">
+
+						<div class="error">
+							<?php echo isset($error->VerifyPassword) ? $error->VerifyPassword : '' ?>
+						</div>
+						<p class="note">6~16 kí tự</p>
 					</td>
 				</tr>
 				<tr>
@@ -156,27 +161,33 @@ if (isset($_POST['username'])) {
 						Mật khẩu 2: </th>
 
 					<td>
-						<input class="srk" type="password" value="" id="Password2" name="Password2" size="36"
+						<input class="srk" type="password" value="<?php if(isset($_POST['Password2'])) echo $_POST['Password2'];?>" id="Password2" name="Password2" size="36"
 							maxlength="16" placeholder="Mật khẩu cấp 2" pattern="[A-Za-z0-9]+">
 						<div class="error">
 							<?php echo isset($error->Password2) ? $error->Password2 : '' ?>
 						</div>
+						<p class="note">6~16 kí tự</p>
 					</td>
 				</tr>
 				<tr>
 					<th class="right">
 						Nhập lại: </th>
 					<td>
-						<input class="srk" type="password" value="" id="verifyPassword2" name="verifyPassword2"
+						<input class="srk" type="password" value="<?php if(isset($_POST['verifyPassword2'])) echo $_POST['verifyPassword2'];?>" id="verifyPassword2" name="verifyPassword2"
 							size="36" maxlength="16" placeholder="Nhập lại mật khẩu cấp 2"
 							pattern="[A-Za-z0-9]+">
+
+						<div class="error">
+							<?php echo isset($error->VerifyPassword2) ? $error->VerifyPassword2 : '' ?>
+						</div>
+						<p class="note">6~16 kí tự</p>
 					</td>
 				</tr>
 				<tr>
 					<th class="right">
-						Email : </th>
+						Email: </th>
 					<td>
-						<input class="srk" type="text" value="" id="email" name="email" size="36" maxlength="45"
+						<input class="srk" type="text" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>" id="email" name="email" size="36" maxlength="45"
 							placeholder="Email"
 							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$">
 						<div class="error">
@@ -188,8 +199,8 @@ if (isset($_POST['username'])) {
 					<th class="right">
 						Họ tên: </th>
 					<td>
-						<input class="srk" type="text" value="" id="fullname" name="fullname" size="36" maxlength="50"
-							placeholder="Họ và tên" pattern="[A-Za-z0-9 ]+">
+						<input class="srk" type="text" value="<?php if(isset($_POST['fullname'])) echo $_POST['fullname'];?>" id="fullname" name="fullname" size="36" maxlength="50"
+							placeholder="Họ và tên">
 						<div class="error">
 							<?php echo isset($error->Fullname) ? $error->Fullname : '' ?>
 						</div>
@@ -199,7 +210,7 @@ if (isset($_POST['username'])) {
 					<th class="right">
 						Số ĐT: </th>
 					<td>
-						<input class="srk" type="text" value="" id="identityNumber" name="identityNumber" size="36"
+						<input class="srk" type="text" value="<?php if(isset($_POST['identityNumber'])) echo $_POST['identityNumber'];?>" id="identityNumber" name="identityNumber" size="36"
 							maxlength="16" placeholder="Số điện thoại" pattern="[0-9]+">
 						<div class="error">
 							<?php echo isset($error->IdentityNumber) ? $error->IdentityNumber : '' ?>
@@ -210,12 +221,15 @@ if (isset($_POST['username'])) {
 					<th class="right">
 						Giới tính: </th>
 					<td>
-						<label class="inline-flex gap5"><input type="radio" name="sex" id="sex" value="1">
+						<label class="inline-flex gap5"><input type="radio" name="sex" id="sex" value="1" <?php if(isset($_POST['sex']) && $_POST['sex'] == '1') echo 'checked';?>>
 						Nam</label>
-						<label class="inline-flex gap5 ml20"><input type="radio" name="sex" id="sex" value="2">
+						<label class="inline-flex gap5 ml20"><input type="radio" name="sex" id="sex" value="2" <?php if(isset($_POST['sex']) && $_POST['sex'] == '2') echo 'checked';?>>
 						Nữ</label>
 						<br>
-						Lưu ý: Chỉ tạo được nhân vật cùng giới tính.
+						<p class="note">Lưu ý: Chỉ tạo được nhân vật cùng giới tính.</p>
+						<div class="error">
+							<?php echo isset($error->Sex) ? $error->Sex : '' ?>
+						</div>
 					</td>
 				</tr>
 				<tr></tr>
@@ -223,7 +237,7 @@ if (isset($_POST['username'])) {
 					<th class="right">
 						Câu hỏi: </th>
 					<td>
-						<select class="srk" id="cauhoi" name="cauhoi" pattern="[A-Za-z0-9 ]+">
+						<select class="srk" id="cauhoi" name="cauhoi">
 							<option value="">Hãy chọn câu hỏi bí mật...</option>
 							<option value="Nguoi yeu ban ten gi">Người yêu bạn tên gì?</option>
 							<option value="Ngoi truong dau tien ban hoc">Ngôi trường đầu tiên bạn học?</option>
@@ -252,7 +266,7 @@ if (isset($_POST['username'])) {
 					</th>
 					<td>
 						<input class="srk" type="text" value="" id="traloi" name="traloi" size="36" maxlength="50"
-							placeholder="Câu trả lời bí mật" pattern="[A-Za-z0-9 ]+">
+							placeholder="Câu trả lời bí mật">
 						<div class="error">
 							<?php echo isset($error->Traloi) ? $error->Traloi : '' ?>
 						</div>
@@ -280,4 +294,5 @@ if (isset($_POST['username'])) {
 			</tbody>
 		</table>
 	</form>
+	<?php }?>
 </div>

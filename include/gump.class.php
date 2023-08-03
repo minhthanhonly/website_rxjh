@@ -551,30 +551,30 @@ class GUMP
 					$resp[$field] = "There is no validation rule for $field";
 					break;
 				case 'validate_required':
-					$resp[$field] = "The $field field is required";
+					$resp[$field] = "Vui lòng nhập dữ liệu";
 					break;
 				case 'validate_valid_email':
-					$resp[$field] = "The $field field is required to be a valid email address";
+					$resp[$field] = "Vui lòng nhập đúng định dạng email";
 					break;
 				case 'validate_max_len':
 					if($param == 1) {
-						$resp[$field] = "The $field field needs to be shorter than $param character";
+						$resp[$field] = "Vui lòng nhập dưới $param kí tự";
 					} else {
-						$resp[$field] = "The $field field needs to be shorter than $param characters";
+						$resp[$field] = "Vui lòng nhập dưới $param kí tự";
 					}
 					break;
 				case 'validate_min_len':
 					if($param == 1) {
-						$resp[$field] = "The $field field needs to be longer than $param character";
+						$resp[$field] = "Vui lòng nhập dưới $param kí tự";
 					} else {
-						$resp[$field] = "The $field field needs to be longer than $param characters";
+						$resp[$field] = "Vui lòng nhập trên $param kí tự";
 					}
 					break;
 				case 'validate_exact_len':
 					if($param == 1) {
-						$resp[$field] = "The $field field needs to be exactly $param character in length";
+						$resp[$field] = "Vui lòng nhập đúng $param kí tự";
 					} else {
-						$resp[$field] = "The $field field needs to be exactly $param characters in length";
+						$resp[$field] = "Vui lòng nhập đúng $param kí tự";
 					}
 					break;
 				case 'validate_alpha':
@@ -629,7 +629,7 @@ class GUMP
 					$resp[$field] = "The $field field needs to be a numeric value, equal to, or lower than $param";
 					break;
 				default:
-					$resp[$field] = "The $field field is invalid";				
+					$resp[$field] = "Không đúng định dạng";
 			}
 		}
 

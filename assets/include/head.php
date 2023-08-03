@@ -30,9 +30,9 @@ content="hiepkhach.net.vn,hiepkhach,hiep khach,hiepkhachgiangho,hiep khach giang
 <meta property="og:type" content="game">
 <meta property="og:url" content="http://hiepkhach.net.vn">
 <meta property="og:image" content="http://hiepkhach.net.vn/assets/images/imgfb.png">
-<meta property="og:site_name" content="hiepkhachgiangho.vn">
-<meta name="description" content="Hiệp Khách Giang Hồ, Hiệp Khách Kteam Hiệp Khách v17, Hiệp Khách Thăng Thiên 5, hkkteam" />
-<meta property="og:description" content="Hiệp Khách Giang Hồ, Hiệp Khách Kteam, Hiệp Khách v20 Hiệp Khách Thăng Thiên 5, hkkteam" />
+<meta property="og:site_name" content="hiepkhach.net.v">
+<meta name="description" content="Hiệp Khách Giang Hồ v8. VNC Games Entertainment. 2023" />
+<meta property="og:description" content="Hiệp Khách Giang Hồ v8. VNC Games Entertainment. 2023" />
 <!-- END: Facebook Meta -->
 
 
