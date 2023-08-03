@@ -104,28 +104,28 @@
 						<div class="img"><img src="/assets/images/shop/1008000363.gif" alt=""></div>
 						<p>
 							<span class="name">Hộ tâm đơn (150%) (24 giờ)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 3000</span>
 						</p>
 					</li>
 					<li title="Đạo cụ đặc biệt, tăng lực công kích 15%, sức phòng ngự 15%, sinh lực 1000, điểm kinh nghiệm 40%, lực công kích võ công 10%, sức phòng ngự võ công 10%">
 						<div class="img"><img src="/assets/images/shop/1008000194.gif" alt=""></div>
 						<p>
 							<span class="name">Chí Tôn Hỏa Dương Đơn</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 880</span>
 						</p>
 					</li>
 					<li title="+300 Hp tất cả khí công + 1">
 						<div class="img"><img src="/assets/images/shop/1008000187.gif" alt=""></div>
 						<p>
 							<span class="name">Thái Cuồng Đơn (10 ngày)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 1380</span>
 						</p>
 					</li>
 					<li title="Trong 10 ngày + 300 HP 0,5% Def cho nhân vật.">
 						<div class="img"><img src="/assets/images/shop/1008000183.gif" alt=""></div>
 						<p>
 							<span class="name">Cầu Tuyết đơn(10 ngày)</span>
-							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 1500</span>
 						</p>
 					</li>
 					<li class="more">

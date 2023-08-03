@@ -13,20 +13,20 @@
 <hr style="margin: 5px 0;">
 <a href="./?a=ranking" class="style1">Xếp hạng cấp độ</a> | <a href="./?a=tlc" class="style2">Xếp hạng thế lực chiến</a> | <a href="./?a=taiphu" class="style2">Xếp hạng tài phú</a>
 <hr style="margin: 5px 0;">
-<a href="./?a=ranking" class="style1">Toàn bộ</a> - 
-<a href="./?a=ranking&char=1" class="style3">Đao</a> - 
-<a href="./?a=ranking&char=2" class="style3">Kiếm</a> - 
-<a href="./?a=ranking&char=3" class="style3">Thương</a> - 
-<a href="./?a=ranking&char=4" class="style3">Cung</a> - 
-<a href="./?a=ranking&char=5" class="style3">Đ.Phu</a> - 
-<a href="./?a=ranking&char=6" class="style3">T.Khách</a> - 
-<a href="./?a=ranking&char=7" class="style3">Cầm</a>
-<!--<a href="./?a=ranking&char=8" class="style3">HBQ</a> - 
-<a href="./?a=ranking&char=9" class="style3">ĐHL</a> - 
-<a href="./?a=ranking&char=10" class="style3">Quyền</a> - 
-<a href="./?a=ranking&char=11" class="style3">D.Yến</a> -
-<a href="./?a=ranking&char=12" class="style3">Tử Hào</a> - 
-<a href="./?a=ranking&char=13" class="style3">Thần Nữ</a> - -->
+<a href="./?a=ranking" class="<?php if(!isset($_GET["char"])) echo 'style1';?>">Toàn bộ</a> -
+<a href="./?a=ranking&char=1" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 1) echo 'style1';?>">Đao</a> -
+<a href="./?a=ranking&char=2" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 2) echo 'style1';?>">Kiếm</a> -
+<a href="./?a=ranking&char=3" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 3) echo 'style1';?>">Thương</a> -
+<a href="./?a=ranking&char=4" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 4) echo 'style1';?>">Cung</a> -
+<a href="./?a=ranking&char=5" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 5) echo 'style1';?>">Đ.Phu</a> -
+<a href="./?a=ranking&char=6" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 6) echo 'style1';?>">T.Khách</a> -
+<a href="./?a=ranking&char=7" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 7) echo 'style1';?>">Cầm</a>
+<!--<a href="./?a=ranking&char=8" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 8) echo 'style1';?>">HBQ</a> -
+<a href="./?a=ranking&char=9" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 9) echo 'style1';?>">ĐHL</a> -
+<a href="./?a=ranking&char=10" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 10) echo 'style1';?>">Quyền</a> -
+<a href="./?a=ranking&char=11" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 11) echo 'style1';?>">D.Yến</a> -
+<a href="./?a=ranking&char=12" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 12) echo 'style1';?>">Tử Hào</a> -
+<a href="./?a=ranking&char=13" class="<?php if(isset($_GET["char"]) && $_GET["char"] == 13) echo 'style1';?>">Thần Nữ</a> - -->
 	<hr style="margin: 5px 0;">
 	<table class="tbl">
 		<thead>
@@ -101,7 +101,7 @@ if($_POST)
 			//$error = (object)$validate->get_errors_array();
 		} 
 		else {
-			$page=$validated_data["trang"];
+			$page=$validated_data["trang"] -1;
 		}
 	}
 	else
@@ -261,28 +261,30 @@ while($row = odbc_fetch_array($item))
 	
 ?>
   </table>
+<?php
+	$sotrang = round(($numberofitem / $line) - 0.51);
+ 	if($sotrang > 0) { ?>
   	<hr class="mt20">
 	<form action="" method="post" id="form1">
 		<div class="flex pagination">
 			<?php
 			$truoc = $page - 1;
 			$sau = $page + 1;
-			$sotrang = round(($numberofitem / $line) - 0.51);
-			echo "<p>Trang $page / $sotrang</p>";
+
+			echo "<p>Trang ".($page + 1)." / $sotrang</p>";
 			echo "<div class='flex gap10'>";
 
 			for ($i = 1; $i <= $sotrang; $i++) {
-				if ($i >= 0 && $i <= $sotrang) {
-					if ($i == $page)
-						echo "<strong class='current'>" . $i . "</strong>";
-					else
-						echo "<a href='?a=webshop&page=" . $i . "&type=" . $type . "'>" . $i . "</a> ";
-				}
+				if ($i == $page + 1)
+					echo "<strong class='current'>" . $i . "</strong>";
+				else
+					echo "<a href='?a=ranking&page=" . ($i  - 1). "&type=" . $type . "'>" . $i . "</a> ";
 			}
 			?>
-			<input type="number" name="trang" min="0" max="<?php echo $sotrang; ?>" value="<?php echo $page; ?>" class='ml10'">
+			<input type="number" name="trang" min="1" max="<?php echo $sotrang; ?>" value="<?php echo $page +1; ?>" class='ml10'">
 			<input type="submit" value="Đến"></input>
 			</div>
 		</div>
 	</form>
+<?php } ?>
 </div>

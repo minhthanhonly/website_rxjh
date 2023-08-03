@@ -107,7 +107,7 @@
 						die;
 						//$error = (object)$validate->get_errors_array();
 					} else {
-						$page = $validated_data["trang"];
+						$page = $validated_data["trang"] - 1;
 					}
 				} else {
 					$page = 0;
@@ -195,19 +195,17 @@
 					$truoc = $page - 1;
 					$sau = $page + 1;
 					$sotrang = round(($numberofitem / $line) - 0.51);
-					echo "<p>Trang $page / $sotrang</p>";
+					echo "<p>Trang ".($page + 1)." / $sotrang</p>";
 					echo "<div class='flex gap10'>";
 
 					for ($i = 1; $i <= $sotrang; $i++) {
-						if ($i >= 0 && $i <= $sotrang) {
-							if ($i == $page)
-								echo "<strong class='current'>" . $i . "</strong>";
-							else
-								echo "<a href='?a=webshop&page=" . $i . "&type=" . $type . "'>" . $i . "</a> ";
-						}
+						if ($i == $page + 1)
+							echo "<strong class='current'>" . $i . "</strong>";
+						else
+							echo "<a href='?a=webshop&page=" . ($i  - 1). "&type=" . $type . "'>" . $i . "</a> ";
 					}
 					?>
-					<input type="number" name="trang" min="0" max="<?php echo $sotrang; ?>" value="<?php echo $page; ?>" class='ml10'">
+					<input type="number" name="trang" min="1" max="<?php echo $sotrang; ?>" value="<?php echo $page +1; ?>" class='ml10'">
 					<input type="submit" value="Đến"></input>
 					</div>
 				</div>

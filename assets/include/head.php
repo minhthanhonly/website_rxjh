@@ -1,15 +1,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>.:: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân ::.</title>
-<link rel="shortcut icon" href="http://yulgang.mgame.com/favicon.ico" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="google-site-verification" content="pREndLVVRadvwpFjs6eOgxzKXLUFwBzxlimyHVU-8m8" />
+<meta name="viewport" content="width=device-width">
+<meta name="google-site-verification" content="" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127045668-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=XXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-
 gtag('config', 'XXX');
 function killCopy(e) {
     return false
