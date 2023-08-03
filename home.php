@@ -57,6 +57,7 @@
 				</tbody>
 			</table>
 			<a href="/?a=ranking" class="btn-rank-more"><img src="/assets/images/server-more.png" alt="more"></a>
+			<img src="/assets/images/lights.png" alt="" class="img-light">
 		</div>
 		<div class="box-home-wrap__center">
 			<div class="box-banner">
@@ -90,16 +91,71 @@
 			</div>
 		</div>
 		<div class="box-home-wrap__right">
-			<ul class="lst-link">
-				<li><a href="/?a=webshop"><img src="/assets/images/icn-shop.png" alt="">Cửa Hàng</a></li>
-				<li><a href="https://www.facebook.com/ThoLamGames" target="_blank"><img src="/assets/images/icn-support.png" alt="">Hỗ Trợ</a></li>
-				<li><a href="https://www.facebook.com/ThoLamGames" target="_blank"><img src="/assets/images/icn-fb2.png" alt="">Fanpage</a></li>
-				<li><a href="https://www.facebook.com/ThoLamGames" target="_blank"><img src="/assets/images/icn-group.png" alt="">FB Group</a></li>
-			</ul>
-			<ul class="lst-icon">
-				<li><a href="https://www.facebook.com/ThoLamGames" target="_blank"><img src="/assets/images/icn-fb.png" alt=""></a></li>
-				<li><a href="#" target="_blank"><img src="/assets/images/icn-zalo.png" alt=""></a></li>
-			</ul>
+			<div class="box-shop">
+				<ul>
+					<li title="Búp bê mèo may mắn. EXP +20%, Rớt đồ +20%, Tiền +40%, HP +100 trong 2 giờ(10 lần sử dụng)">
+						<div class="img"><img src="/assets/images/shop/1008000232.gif" alt=""></div>
+						<p>
+							<span class="name">Mèo Tài Phú</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+						</p>
+					</li>
+					<li title="Trong vòng 24 giờ nhận thêm 150% điểm Exp (Level có thể dùng: 1~130, có thể dùng 1 lần)">
+						<div class="img"><img src="/assets/images/shop/1008000363.gif" alt=""></div>
+						<p>
+							<span class="name">Hộ tâm đơn (150%) (24 giờ)</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+						</p>
+					</li>
+					<li title="Đạo cụ đặc biệt, tăng lực công kích 15%, sức phòng ngự 15%, sinh lực 1000, điểm kinh nghiệm 40%, lực công kích võ công 10%, sức phòng ngự võ công 10%">
+						<div class="img"><img src="/assets/images/shop/1008000194.gif" alt=""></div>
+						<p>
+							<span class="name">Chí Tôn Hỏa Dương Đơn</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+						</p>
+					</li>
+					<li title="+300 Hp tất cả khí công + 1">
+						<div class="img"><img src="/assets/images/shop/1008000187.gif" alt=""></div>
+						<p>
+							<span class="name">Thái Cuồng Đơn (10 ngày)</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+						</p>
+					</li>
+					<li title="Trong 10 ngày + 300 HP 0,5% Def cho nhân vật.">
+						<div class="img"><img src="/assets/images/shop/1008000183.gif" alt=""></div>
+						<p>
+							<span class="name">Cầu Tuyết đơn(10 ngày)</span>
+							<span class="price"><img src="/assets/images/shop/coin.png" alt=""> 800</span>
+						</p>
+					</li>
+					<li class="more">
+						<a href="/?a=webshop">+ Xem thêm</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="box-chanel">
+				<ul>
+					<li>
+						<p>
+							Kênh 1
+							<span class="<?php if(isset($kenh1) && $kenh1 == true) echo 'online'; ?>"></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							Kênh 2
+							<span class="<?php if(isset($kenh2) && $kenh2 == true) echo 'online'; ?>"></span>
+						</p>
+					</li>
+					<li>
+						<p>
+							Kênh 3
+							<span class="<?php if(isset($kenh3) && $kenh3 == true) echo 'online'; ?>"></span>
+						</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

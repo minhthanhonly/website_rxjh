@@ -2,7 +2,7 @@
 // $myServer = "WIN-CLJ1B0GQ6JP";
 // $myUser = "sa";
 // $myPass = "Zaq@1234567890987123456zxc";
-$myServer = "DESKTOP-90U54L9\SQLEXPRESS";
+$myServer = "SOMEONE\SQLEXPRESS";
 $myUser = "sa";
 $myPass = "896584";
 $myDB = "rxjhaccount";
