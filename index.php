@@ -6,7 +6,7 @@ require "./include/gump.class.php";
 require "./include/gameconn.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 	<?php include_once "./assets/include/head.php"; ?>
 	<?php include_once "./assets/include/commoncss.php"; ?>
