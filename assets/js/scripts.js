@@ -46,4 +46,5 @@ $(function(){
         $parent.find(target).addClass("-active").fadeIn();
         $(this).addClass("-active");
     });
+
 });

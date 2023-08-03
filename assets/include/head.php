@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>.:: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân ::.</title>
+<title>.: Hiệp Khách Giang Hồ - Hồi Ức Thanh Xuân - VNC Games Entertainment :.</title>
 <meta name="viewport" content="width=device-width">
 <meta name="google-site-verification" content="" />
 

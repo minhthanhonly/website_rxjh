@@ -1,3 +1,4 @@
+<script src="/assets/js/top.js" defer></script>
 <div class="box-home-main">
 	<img src="/assets/images/img-main.png" alt="">
 </div>
@@ -158,4 +159,9 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="fixedParts">
+  <div class="soundBtn"><a href="javascript:void(0);"></a></div>
+  <div class="pageTop"><a href="#top" class="btn-scroll-top"></a></div>
 </div>
