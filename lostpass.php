@@ -10,8 +10,8 @@ if (isset($_POST['accx'])) {
 	$valide->validation_rules(
 		array(
 			'accx' => 'required|alpha_dash|max_len,16|min_len,6',
-			'passx' => 'required|alpha_dash|max_len,16|min_len,6',
-			'passx2' => 'required|alpha_dash|max_len,16|min_len,6',
+			'passx' => 'required|max_len,16|min_len,6',
+			'passx2' => 'required|max_len,16|min_len,6',
 			'cauhoi' => 'required|alpha_space|max_len,50',
 			'traloi' => 'required|alpha_space|max_len,50',
 		)

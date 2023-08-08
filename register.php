@@ -2,6 +2,8 @@
 // require "/include/define.php";
 // require "/include/conn.php";
 // require "/include/gump.class.php";
+
+
 $error1 = "";
 $ischeck= false;
 if (isset($_POST['username'])) {
@@ -9,7 +11,7 @@ if (isset($_POST['username'])) {
 	$valide->validation_rules(
 		array(
 			'username' => 'required|alpha_dash|max_len,12|min_len,6',
-			'Password' => 'required|alpha_dash|max_len,16|min_len,6',
+			'Password' => 'required|max_len,16|min_len,6',
 			'verifyPassword' => 'required|alpha_dash|max_len,16|min_len,6',
 			'Password2' => 'required|alpha_dash|max_len,16|min_len,6',
 			'verifyPassword2' => 'required|alpha_dash|max_len,16|min_len,6',
@@ -51,11 +53,24 @@ if (isset($_POST['username'])) {
 		$sex = $validated_data['sex'];
 		$ip = $_SERVER['REMOTE_ADDR'];
 
+		$status = '';
+		$err = 0;
+		if ($_POST['captcha'] == '') {
+			$status = "<p class='error'><span>Vui lòng nhập mã bảo vệ</span></p>";
+			$err = 1;
+		}
+		if ( isset($_POST['captcha']) && ($_POST['captcha'] != "") ){
+			if(strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0){
+				$status = "<p class='error'><span>Vui lòng nhập đúng mã bảo vệ</span></p>";
+				$err = 1;
+			}
+		}
+
 
 		$partten = "/([\w_]+){6,12}$/";
 		if (preg_match($partten, $pass, $matchs) && preg_match($partten, $pass2, $matchs)) {
 
-			$err = 0;
+
 			$error1 ='';
 			/*kiem ta tai khoan ton tai*/
 			$sql = "SELECT ID FROM TBL_ACCOUNT WHERE FLD_ID = '" . $acc . "'";
@@ -272,19 +287,28 @@ if (isset($_POST['username'])) {
 						</div>
 					</td>
 				</tr>
-				<!-- <tr>
+				<tr>
 					<th class="right">
 						<span>Captcha</span>
 					</th>
 					<td>
-						<script src="https://www.google.com/recaptcha/api.js"></script>
-						<script>
-							function onSubmit(token) {
-								document.getElementById("demo-form").submit();
-							}
+					<script>
+						//Refresh Captcha
+						function refreshCaptcha(){
+							var img = document.images['captcha_image'];
+							img.src = img.src.substring(
+								0,img.src.lastIndexOf("?")
+								)+"?rand="+Math.random()*1000;
+						}
 						</script>
+						<input type="text" name="captcha" placeholder="Mã bảo vệ"> <img src="captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'>
+						<a href='javascript: refreshCaptcha();'>Refresh</a></p>
+
+						<div class="error">
+							<?php echo isset($status) ? $status : '' ?>
+						</div>
 					</td>
-				</tr> -->
+				</tr>
 				<tr>
 					<th></th>
 					<td>

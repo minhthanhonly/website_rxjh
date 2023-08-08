@@ -13,7 +13,7 @@
 		$_POST = $valide->sanitize($_POST);
 		$valide->validation_rules(array(
 			'accx'    => 'required|alpha_dash|max_len,12|min_len,6',
-			'passx'    => 'required|alpha_dash|max_len,16|min_len,6',
+			'passx'    => 'required|max_len,16|min_len,6',
 		));
 		$valide->filter_rules(array(
 			'accx' => 'trim|sanitize_string',
