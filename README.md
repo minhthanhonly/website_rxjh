@@ -14,21 +14,22 @@ Yulgang là một trang web về game nhập vai trực tuyến nhiều người
 - **Đăng ký**
 - **Đăng nhập**: 
 
+## Hướng dẫn cài dặt
+- Bạn phải có Database Yulgang cài sẵn.
+- Chỉnh sửa connect trong /include/conn.php
 
 ## Thông Tin Khác
 
 ### Yêu Cầu Hệ Thống
 
-- **Hệ Điều Hành**: Windows 7/8/10/11, Windows Server
-- **CPU**: Intel Core i3 hoặc cao hơn
-- **RAM**: 4GB trở lên
-- **Card Đồ Họa**: NVIDIA GeForce GTX 460 hoặc cao hơn
-- **Dung Lượng Ổ Cứng**: Ít nhất 10GB
+- **Hệ Điều Hành**: Windows 7/8/10/11, Windows Server 2012 hoặc mới hơn
+- **MsSQL Server: 2012 hoặc mới hơn. Cần có Driver SQL Server Native Client 11.0 trở lên.
 
 ### Hỗ Trợ
 
 Không hỗ trợ.
+Không chịu bất kỳ trách nhiệm nào đối với việc bạn sử dụng website này phát sinh lỗi, mất dữ liệu... 
 
 ## Bản Quyền
 
-MIT
+&copy; minhthahonly. MIT License.
