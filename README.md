@@ -9,10 +9,9 @@ Yulgang là một trang web về game nhập vai trực tuyến nhiều người
 ## Tính năng
 
 - **Trang Chủ**: Cập nhật các tin tức và sự kiện mới nhất.
-- **Thư Viện**: Cung cấp thông tin chi tiết về các nhân vật, trang bị, kỹ năng và hệ thống trong game.
 - **Cửa Hàng**: Bán các vật phẩm trong game, từ trang bị, trang phục đến các vật phẩm hỗ trợ khác.
 - **Đăng ký**
-- **Đăng nhập**: 
+- **Đăng nhập**
 
 ## Hướng dẫn cài dặt
 - Bạn phải có Database Yulgang cài sẵn.
@@ -27,8 +26,8 @@ Yulgang là một trang web về game nhập vai trực tuyến nhiều người
 
 ### Hỗ Trợ
 
-Không hỗ trợ.
-Không chịu bất kỳ trách nhiệm nào đối với việc bạn sử dụng website này mà phát sinh lỗi, mất dữ liệu... 
+- Không hỗ trợ.
+- Không chịu bất kỳ trách nhiệm nào đối với việc bạn sử dụng website này mà phát sinh lỗi, mất dữ liệu... 
 
 ## Bản Quyền
 
