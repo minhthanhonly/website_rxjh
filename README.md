@@ -28,8 +28,8 @@ Yulgang là một trang web về game nhập vai trực tuyến nhiều người
 ### Hỗ Trợ
 
 Không hỗ trợ.
-Không chịu bất kỳ trách nhiệm nào đối với việc bạn sử dụng website này phát sinh lỗi, mất dữ liệu... 
+Không chịu bất kỳ trách nhiệm nào đối với việc bạn sử dụng website này mà phát sinh lỗi, mất dữ liệu... 
 
 ## Bản Quyền
 
-&copy; minhthahonly. MIT License.
+&copy; [minhthanhonly](https://www.facebook.com/thanhonly). MIT License.
