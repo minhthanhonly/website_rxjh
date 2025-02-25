@@ -23,6 +23,7 @@ Yulgang là một trang web về game nhập vai trực tuyến nhiều người
 
 - **Hệ Điều Hành**: Windows 7/8/10/11, Windows Server 2012 hoặc mới hơn
 - **MsSQL Server: 2012 hoặc mới hơn. Cần có Driver SQL Server Native Client 11.0 trở lên.
+- **Web Server: Xampp (tùy chọn) 
 
 ### Hỗ Trợ
 
